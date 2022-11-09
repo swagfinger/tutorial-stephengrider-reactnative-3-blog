@@ -17,8 +17,6 @@ const navigator = createStackNavigator(
   }
 );
 
-const styles = StyleSheet.create({});
-
 //createAppContainer returns a react component
 const App = createAppContainer(navigator);
 export default () => {
