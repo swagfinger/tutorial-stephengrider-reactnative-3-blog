@@ -1,6 +1,6 @@
-import React, { useReducer } from 'react';
 import createDataContext from './createDataContext'; //generic context
 
+//reducer
 const blogReducer = (state, action) => {
   switch (action.type) {
     case 'add_blogpost':
@@ -10,10 +10,15 @@ const blogReducer = (state, action) => {
   }
 };
 
-const addBlogPost = () => {
-  dispatch({ type: 'add_blogpost' });
+//functions
+//addBlogPost needs 'dispatch' which it will receive from createDataContext
+const addBlogPost = (dispatch) => {
+  return () => {
+    dispatch({ type: 'add_blogpost' });
+  };
 };
 
+//function createDataContext() takes in reducer, functions, initialstate
 export const { Context, Provider } = createDataContext(
   blogReducer,
   { addBlogPost },
