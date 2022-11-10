@@ -5,6 +5,7 @@ const BlogContext = React.createContext();
 export const BlogProvider = ({ children }) => {
   const [blogPosts, setBlogPosts] = useState([]);
 
+  //todo: change functions to useReducer()
   const addBlogPost = () => {
     setBlogPosts([
       ...blogPosts,
