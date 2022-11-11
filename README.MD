@@ -17,6 +17,16 @@ npx create-expo-app <projectfolder>
 
 ## Dependencies
 
+- for data - https://www.npmjs.com/package/json-server
+- tunnelling ngrok
+- using stephengrider-reactnative-jsonserver
+- api/jsonServer.js baseURL changes everytime we re-run ngrok or when timeout...
+
 ```cmd
 npm i react-navigation
+
+npm i json-server ngrok
+
+
+
 ```
